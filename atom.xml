@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shgshajw.github.io</id>
     <title>博客</title>
-    <updated>2020-09-13T03:44:58.717Z</updated>
+    <updated>2020-09-13T03:55:23.755Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shgshajw.github.io"/>
     <link rel="self" href="https://shgshajw.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://shgshajw.github.io/images/avatar.png</logo>
     <icon>https://shgshajw.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 博客</rights>
+    <entry>
+        <title type="html"><![CDATA[三丰云免费云服务器和免费虚拟主机]]></title>
+        <id>https://shgshajw.github.io/post/san-feng-yun-mian-fei-yun-fu-wu-qi-he-mian-fei-xu-ni-zhu-ji/</id>
+        <link href="https://shgshajw.github.io/post/san-feng-yun-mian-fei-yun-fu-wu-qi-he-mian-fei-xu-ni-zhu-ji/">
+        </link>
+        <updated>2020-09-13T03:48:57.000Z</updated>
+        <content type="html"><![CDATA[<p>用了不少服务器，三丰云免费云服务器和免费虚拟主机，是我见过最好的云服务器，运行稳定特别适合小白上手。后台简洁方便，新手如果有什么搞不懂的问题，哪怕你是免费的云服务器，客服也会耐心的给你讲解教你如何运行和使用云服务器，用了这么长时间云服务器，还是三丰云服务器最靠谱。另外，能抗DDOS攻击的防御机制，让我们这些使用免费云服务器和免费虚拟主机的用户非常放心，机器配置也不错。最重要的是我觉得可以一直免费使用，很适合做一些开发测试。<img src="https://shgshajw.github.io/post-images/1599969311688.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[优豆云免费服务器]]></title>
         <id>https://shgshajw.github.io/post/you-dou-yun-mian-fei-fu-wu-qi/</id>
