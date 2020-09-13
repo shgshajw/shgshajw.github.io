@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://shgshajw.github.io</id>
+    <title>博客</title>
+    <updated>2020-09-13T03:41:25.990Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://shgshajw.github.io"/>
+    <link rel="self" href="https://shgshajw.github.io/atom.xml"/>
+    <subtitle>博客</subtitle>
+    <logo>https://shgshajw.github.io/images/avatar.png</logo>
+    <icon>https://shgshajw.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 博客</rights>
+    <entry>
+        <title type="html"><![CDATA[优豆云免费服务器]]></title>
+        <id>https://shgshajw.github.io/post/you-dou-yun-mian-fei-fu-wu-qi/</id>
+        <link href="https://shgshajw.github.io/post/you-dou-yun-mian-fei-fu-wu-qi/">
+        </link>
+        <updated>2020-09-13T03:37:00.000Z</updated>
+        <content type="html"><![CDATA[<p>优豆云免费云服务器,感觉很不错,速度快,性能也稳定. 支持Windows、Linux系统，10GB固态硬盘，5G带宽，1G内存. 优豆云 www.udouyun.com<br>
+<img src="https://shgshajw.github.io/post-images/1599968301834.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Oneindex手动注册应用]]></title>
+        <id>https://shgshajw.github.io/post/oneindex-shou-dong-zhu-ce-ying-yong/</id>
+        <link href="https://shgshajw.github.io/post/oneindex-shou-dong-zhu-ce-ying-yong/">
+        </link>
+        <updated>2020-09-10T14:34:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul 2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul 2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+<!-- more -->
+<p>点击“ 获取应用ID和机密(分两个页面显示，请注意保存)”按钮<br>
+<img src="https://shgshajw.github.io/post-images/1599748659031.png" alt="" loading="lazy"><br>
+正常登入账户</p>
+<!-- more -->
+<p>错误原因分析<br>
+微软对office应用注册页面进行了调整，旧版页面已经不可用</p>
+<p>解决方案<br>
+使用Azure创建应用</p>
+<!-- more -->
+<p>手动注册<br>
+<img src="https://shgshajw.github.io/post-images/1599748868020.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>进入应用注册<br>
+在上方搜索栏输入“应用注册”<br>
+<img src="https://shgshajw.github.io/post-images/1599748914874.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>新注册<br>
+<img src="https://shgshajw.github.io/post-images/1599748953543.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>应用名称自定，重定向 URI为：https://oneindex.github.io/<br>
+对照图片操作<br>
+<img src="https://shgshajw.github.io/post-images/1599749015376.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>接着创建密码<br>
+<img src="https://shgshajw.github.io/post-images/1599749059358.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>复制密码，填入<br>
+<img src="https://shgshajw.github.io/post-images/1599749106709.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>返回 概览，获取应用程序ID<br>
+<img src="https://shgshajw.github.io/post-images/1599749147734.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>填入<br>
+<img src="https://shgshajw.github.io/post-images/1599749196413.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>最后进行账号绑定，一定要用与刚才注册的一个账户</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://shgshajw.github.io/post-images/1599749279010.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[H2-3超级管理员账号密码]]></title>
+        <id>https://shgshajw.github.io/post/qwq/</id>
+        <link href="https://shgshajw.github.io/post/qwq/">
+        </link>
+        <updated>2020-09-05T21:12:26.000Z</updated>
+        <content type="html"><![CDATA[<p>CMCCAdmin<br>
+aDm8H%MdA</p>
+]]></content>
+    </entry>
+</feed>
