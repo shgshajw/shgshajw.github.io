@@ -1,248 +1,234 @@
+<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
-<title>博客</title>
-<meta name="description" content="博客">
+<title>文章归档 | 博客</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://shgshajw.github.io/favicon.ico?v=1600177439134">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://shgshajw.github.io/favicon.ico?v=1600177556838">
 <link rel="stylesheet" href="https://shgshajw.github.io/styles/main.css">
 
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
+    <meta name="description" content="博客">
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://shgshajw.github.io">
-        <img class="avatar" src="https://shgshajw.github.io/images/avatar.png?v=1600177439134" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://shgshajw.github.io">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://shgshajw.github.io">
+        <img src="https://shgshajw.github.io/images/avatar.png?v=1600177556838" class="site-logo">
         <h1 class="site-title">博客</h1>
       </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
     </div>
   </div>
-</transition>
-
-
-        <div class="content-container">
-          
-          
-
-<div class="archives-container">
-  
-    <h2 class="year">2020</h2>
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-liu-zhang-feng-bi-tong-dao/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十六章 封闭通道！
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
+        
       
-    
+        
       
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-wu-zhang-qi-cai-sheng-long/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十五章 七彩升龙！
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
+        
       
-    
+        
       
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-si-zhang-kai-ting-yi-shi/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十四章 开厅仪式！
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
+        
       
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-san-zhang-yu-zhou-shi/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十三章 宇宙石
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-er-zhang-lan-xuan-yu-de-long-li-ting/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十二章 蓝轩宇的龙力厅
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-yi-zhang-tian-long-hui-cheng-yuan/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十一章 天龙会成员
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-zhang-tian-long-hui-hui-zhang/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百一十章 天龙会徽章
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-ling-jiu-zhang-yin-dong-qi-cai-long-li-bu-yao-zhao-ji-tu-po/">
-            <h2 class="post-title">
-              斗罗大陆4：第一千三百零九章 引动七彩龙力不要着急突破
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-ling-ba-zhang-zhi-neng-lan-xi-shou/">
-            <h2 class="post-title">
-              斗罗大陆4:第一千三百零八章 只能蓝吸收
-              <small>2020-09-15</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/san-feng-yun-mian-fei-yun-fu-wu-qi-he-mian-fei-xu-ni-zhu-ji/">
-            <h2 class="post-title">
-              三丰云免费云服务器和免费虚拟主机
-              <small>2020-09-13</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/you-dou-yun-mian-fei-fu-wu-qi/">
-            <h2 class="post-title">
-              优豆云免费服务器
-              <small>2020-09-13</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/oneindex-shou-dong-zhu-ce-ying-yong/">
-            <h2 class="post-title">
-              Oneindex手动注册应用
-              <small>2020-09-10</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://shgshajw.github.io/qwq/">
-            <h2 class="post-title">
-              H2-3超级管理员账号密码
-              <small>2020-09-06</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
+    </div>
+    <div class="site-description">
+      博客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://shgshajw.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+
+          <h2 class="archives-title">文章归档</h2>
+          <div class="archives-container">
+            
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-liu-zhang-feng-bi-tong-dao/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十六章 封闭通道！
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-wu-zhang-qi-cai-sheng-long/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十五章 七彩升龙！
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-si-zhang-kai-ting-yi-shi/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十四章 开厅仪式！
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-san-zhang-yu-zhou-shi/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十三章 宇宙石
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-er-zhang-lan-xuan-yu-de-long-li-ting/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十二章 蓝轩宇的龙力厅
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-yi-zhang-tian-long-hui-cheng-yuan/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十一章 天龙会成员
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-yi-shi-zhang-tian-long-hui-hui-zhang/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百一十章 天龙会徽章
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-ling-jiu-zhang-yin-dong-qi-cai-long-li-bu-yao-zhao-ji-tu-po/">
+                      <h2 class="post-title">
+                        斗罗大陆4：第一千三百零九章 引动七彩龙力不要着急突破
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/dou-luo-da-lu-4di-yi-qian-san-bai-ling-ba-zhang-zhi-neng-lan-xi-shou/">
+                      <h2 class="post-title">
+                        斗罗大陆4:第一千三百零八章 只能蓝吸收
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/san-feng-yun-mian-fei-yun-fu-wu-qi-he-mian-fei-xu-ni-zhu-ji/">
+                      <h2 class="post-title">
+                        三丰云免费云服务器和免费虚拟主机
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/you-dou-yun-mian-fei-fu-wu-qi/">
+                      <h2 class="post-title">
+                        优豆云免费服务器
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/oneindex-shou-dong-zhu-ce-ying-yong/">
+                      <h2 class="post-title">
+                        Oneindex手动注册应用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://shgshajw.github.io/qwq/">
+                      <h2 class="post-title">
+                        H2-3超级管理员账号密码
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+            
+          </div>
+
+          <div class="pagination-container">
+  
+  
+</div>
 
         </div>
-
-        <div class="site-footer">
-  <div class="slogan">博客</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://shgshajw.github.io/atom.xml" target="_blank">RSS</a>
-</div>
-
-
       </div>
-      <script type="application/javascript">
+    </div>
 
-hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
 
 var app = new Vue({
   el: '#app',
@@ -256,6 +242,7 @@ var app = new Vue({
 
 
 
-    </div>
+
+
   </body>
 </html>
