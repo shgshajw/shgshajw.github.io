@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://shgshajw.github.io</id>
     <title>博客</title>
-    <updated>2020-09-19T05:44:06.869Z</updated>
+    <updated>2020-09-19T11:11:45.263Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://shgshajw.github.io"/>
     <link rel="self" href="https://shgshajw.github.io/atom.xml"/>
@@ -47,9 +47,13 @@
         <link href="https://shgshajw.github.io/oneindex-shou-dong-zhu-ce-ying-yong/">
         </link>
         <updated>2020-09-10T14:34:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul 2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+        <summary type="html"><![CDATA[<blockquote>
+<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul &gt;2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+</blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul 2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+        <content type="html"><![CDATA[<blockquote>
+<p>近期有搭建oneindex的用户会发现oneindex自动注册机制已经失效了，提示错误类似：Sun, 12 Jul &gt;2020 10:23:51 GMT | ? | ? 本文将解决这个问题.</p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
