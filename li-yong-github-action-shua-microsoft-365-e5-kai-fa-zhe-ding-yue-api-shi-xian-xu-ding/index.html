@@ -6,7 +6,7 @@
 
 <title>利用Github Action刷Microsoft 365 E5开发者订阅API实现续订 | 博客</title>
 
-<link rel="shortcut icon" href="https://shgshajw.github.io/favicon.ico?v=1601041103650">
+<link rel="shortcut icon" href="https://shgshajw.github.io/favicon.ico?v=1601041602303">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://shgshajw.github.io/styles/main.css">
@@ -61,7 +61,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1601041103650" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1601041602303" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -82,34 +82,46 @@
                     
                 </div>
                 <div class="post-content">
-                    <p>昨天又介绍了一次E5试用订阅！目前已知的经常使用Microsoft 365 API能实现订阅的续订！</p>
-<p>本文介绍一下不用“充元宝”，全靠手打的，散人全自动刷API方案！！</p>
-<p>原理：利用免费的Github Action 定期刷 Microsoft 365 API！不用服务器搭建！</p>
-<p>本文的方法不能100%保证试用订阅能续订！！介意者请绕道哈！！</p>
+                    <blockquote>
+<p>昨天又介绍了一次E5试用订阅！目前已知的经常使用Microsoft 365 API能实现订阅的续订！<br>
+本文介绍一下不用“充元宝”，全靠手打的，散人全自动刷API方案！！<br>
+原理：利用免费的Github Action 定期刷 Microsoft 365 API！不用服务器搭建！<br>
+本文的方法不能100%保证试用订阅能续订！！介意者请绕道哈！！</p>
+</blockquote>
 <!-- more -->
-<p>准备工作<br>
-1）E5管理账号</p>
-<p>2）Github账号（不建议用常用账号）</p>
-<p>3）记事本（用于记录ID密码！）</p>
-<!-- more -->
-<p>开源项目<br>
-https://github.com/wangziyingwen/AutoApiSecret</p>
-<p>项目说明中有完整的教程！博主按照教程撸了一遍！然后补全图片和完善文案！</p>
-<!-- more -->
-<p>操作步骤<br>
+<ul>
+<li>准备工作</li>
+</ul>
+<ol>
+<li>E5管理账号</li>
+<li>Github账号（不建议用常用账号）</li>
+<li>记事本（用于记录ID密码！）</li>
+</ol>
+<hr>
+<ul>
+<li>开源项目<br>
+https://github.com/wangziyingwen/AutoApiSecret<br>
+项目说明中有完整的教程！博主按照教程撸了一遍！然后补全图片和完善文案！</li>
+</ul>
+<hr>
+<ul>
+<li>操作步骤<br>
 获取Token<br>
-这里介绍完全自己！</p>
-<p>1）前往 https://portal.azure.com/ 登陆E5管理账号注册应用。</p>
+这里介绍完全自己！</li>
+</ul>
+<ol>
+<li>前往 https://portal.azure.com/ 登陆E5管理账号注册应用。</li>
+</ol>
 <p>首页找到【Azure Active Directory】（如果没有可以搜索）然后点击【应用注册】-&gt; 【+新注册】！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/Qu5flWQYIM/123.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/9K196hsGrY/01e0c00051e1c9f1d7d21ea512c0c7ea.png" alt="" loading="lazy"><br>
-2）【名称】 随便填写，受支持的账户类型 选择【任何组织目录(任何 Azure AD 目录 – 多租户)中的帐户】</p>
+2. 【名称】 随便填写，受支持的账户类型 选择【任何组织目录(任何 Azure AD 目录 – 多租户)中的帐户】</p>
 <p>【重定向URI】填写：http://localhost:53682/</p>
 <p>然后点击【注册】<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/67nd1ukKvM/a97d9c17cc21038cf4fd6410210a21aa.png" alt="" loading="lazy"><br>
-3）注册成功后，将【应用程序(客户端)ID】记录下来，后面会用到！<br>
+3. 注册成功后，将【应用程序(客户端)ID】记录下来，后面会用到！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/654d3cu75k/05c91736bd458252d4fad1d67b3f2ff3.png" alt="" loading="lazy"><br>
-4）点击左侧菜单【API权限】-&gt; 【添加权限】 -&gt; 【Microsoft Graph】-&gt; 选中【委托的权限】</p>
+4. 点击左侧菜单【API权限】-&gt; 【添加权限】 -&gt; 【Microsoft Graph】-&gt; 选中【委托的权限】</p>
 <p>以下权限分别搜索勾选！勾选完点击按钮【添加权限】</p>
 <p>Files.Read.All      Files.ReadWrite.All</p>
 <p>Sites.Read.All      Sites.ReadWrite.All</p>
@@ -118,46 +130,59 @@ https://github.com/wangziyingwen/AutoApiSecret</p>
 <p>Mail.Read      Mail.ReadWrite</p>
 <p>MailboxSettings.Read      MailboxSettings.ReadWrite<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/Ukk72CkcG9/1b1cb013b6b7477a1b4c409a24c45379.png" alt="" loading="lazy"><br>
-5）在API权限页面，如果界面上有【代表xxx授予管理员同意】按钮，一定要点一下，然后同意授权！</p>
+5. 在API权限页面，如果界面上有【代表xxx授予管理员同意】按钮，一定要点一下，然后同意授权！</p>
 <p>如果没有这个按钮，就不用管了！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/VTGl6FA3uv/846189e6a636dc4f300a814696621d05.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/iPnhbOrUfA/e3469d880e4f0c5fb60426bc7cda1f83.png" alt="" loading="lazy"><br>
-6）点击左侧菜单【证书和密码】-&gt; 【+新客户端密码】</p>
+6. 左侧菜单【证书和密码】-&gt; 【+新客户端密码】</p>
 <p>【说明】随便填，【截止期限】随便选！点击【添加】按钮。</p>
 <p>然后页面下方可见新建的密码，然后将【值】复制记录下来！后面会用到！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/ka8OhRldqe/384eaf1a8e2c21d490fa271af05e57ba.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/AHFEu1bm1A/0eca14a52583c92c011379164a807e49.png" alt="" loading="lazy"><br>
-7）我们利用rclone来获取Token!</p>
+7. 我们利用rclone来获取Token!</p>
 <p>下载rclone（【rclone下载地址1】【rclone下载地址2】）到电脑某个盘符下，在rclone.exe同目录中，按Shift+鼠标右键，选择在【此处打开cmd窗口】或【在此处打开power shell窗口】<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/lyci4MHCNM/88caaf99e0140e0891e01d4e4fc37f0d.png" alt="" loading="lazy"><br>
 然后在弹出执行命令！</p>
-<p>1<br>
-./rclone authorize &quot;onedrive&quot; &quot;应用程序(客户端)ID&quot; &quot;应用程序密码&quot;<br>
+<blockquote>
+<p>./rclone authorize &quot;onedrive&quot; &quot;应用程序(客户端)ID&quot; &quot;应用程序密码&quot;<br>
 本文演示的ID和密码！<br>
 ./rclone authorize &quot;onedrive&quot; &quot;c33b7c34-2d87-4b89-89f0-469d6e78a55e&quot; &quot;P<sub>0zNhn1e._BD.6</sub>xxxxxxx~Ced9JR3&quot;</p>
+</blockquote>
 <p>执行命令后弹出网页登陆E5管理账号，然后接受授权即可！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/mGEHq8LWUp/dca231f1fd57293961ccab7a16d42d21.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/ILwYp4rXrn/a1c8603ada17ee85481c0503e49d58a1.png" alt="" loading="lazy"><br>
-8）授权成功后，窗口弹出得到的Token信息！复制内容</p>
+8. 授权成功后，窗口弹出得到的Token信息！复制内容</p>
 <p>仅复制 【Paste the following into your remote machine —&gt;】开头【&lt;—End paste】结尾的中间部分内容！</p>
 <p>利用搜索引擎找一个【JSON在线格式】的网站，将复制的内容格式化一下。复制refresh_token值内容！不要双引号！<br>
-<img src="http://zblqzx.cf:666/?/images/2020/09/19/GeL9tqtB76/020571d9071e1aaa9778ef7de0179c79.png" alt="" loading="lazy"><br>
-克隆项目<br>
-这里利用的是Github的私有项目来做，如果你认为无所谓可以直接fork原作者的项目！然后直接跳过本节！</p>
-<p>1）登陆Github账号，新建项目（ New repository）！</p>
+<img src="http://zblqzx.cf:666/?/images/2020/09/19/GeL9tqtB76/020571d9071e1aaa9778ef7de0179c79.png" alt="" loading="lazy"></p>
+<ul>
+<li>克隆项目<br>
+这里利用的是Github的私有项目来做，如果你认为无所谓可以直接fork原作者的项目！然后直接跳过本节！</li>
+</ul>
+<ol>
+<li>登陆Github账号，新建项目（ New repository）！</li>
+</ol>
 <p>名称随便，可设置为私有(Private)，想公开项目也行。</p>
 <p>为了安全还是私有吧！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/Uj4fGLao6W/20d77f26436e9b79484036c174179a50.png" alt="" loading="lazy"><br>
-2）项目新建成功后，我们选择Import 导入一个项目！</p>
+2. 项目新建成功后，我们选择Import 导入一个项目！</p>
 <p>项目地址：https://github.com/wangziyingwen/AutoApiSecret</p>
 <p>或者导入：https://github.com/malaohu/AutoApiSecret</p>
-<p>导入的过程略慢！需要多等等！<br>
-配置参数<br>
-1）在线编辑你项目里的1.txt 文件，将整个refresh_token覆盖粘贴进去（原内容不要保留）。</p>
-<p>2）依次点击上栏 【Setting】-&gt; 【Secrets】 -&gt; 【Add a new secret】</p>
+<p>导入的过程略慢！需要多等等！</p>
+<ul>
+<li>配置参数</li>
+</ul>
+<ol>
+<li>
+<p>在线编辑你项目里的1.txt 文件，将整个refresh_token覆盖粘贴进去（原内容不要保留）。</p>
+</li>
+<li>
+<p>依次点击上栏 【Setting】-&gt; 【Secrets】 -&gt; 【Add a new secret】</p>
+</li>
+</ol>
 <p>分别新建：CONFIG_ID、CONFIG_KEY</p>
-<p>替换你的ID 和 密码！一定要注意前面r 和 单引号！</p>
-<p>CONFIG_ID<br>
+<p>替换你的ID 和 密码！一定要注意前面r 和 单引号！<br>
+CONFIG_ID<br>
 id=r'应用程序(客户端)ID'</p>
 <p>CONFIG_KEY<br>
 secret=r'应用程序密码'<br>
@@ -165,7 +190,7 @@ secret=r'应用程序密码'<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/7bhtnXuFNq/b4a8df2222885fb1617aa9f2e362d97c.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/yIxCubUDdG/97cdcf60d5cc492440ff0847a127c377.png" alt="" loading="lazy"><br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/TuEciTynQC/503aef93b6112dd50808aaec64b5667f.png" alt="" loading="lazy"><br>
-3）打开地址：https://github.com/settings/tokens 点击【Generate new token】</p>
+3. 打开地址：https://github.com/settings/tokens 点击【Generate new token】</p>
 <p>设置名字：GITHUB_TOKEN ,</p>
 <p>勾选 repo , admin:repo_hook , workflow 等选项，点击按钮【Generate token】！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/Ftqt3Vd2cR/c527e37ac2b38c30aff8feac05c18888.png" alt="" loading="lazy"><br>
@@ -176,11 +201,23 @@ secret=r'应用程序密码'<br>
 如图展示日志，说明成功啦！！3小时后再确认下是否自动运行了（ation里是否多出来几个），是的话就不用管了！<br>
 <img src="http://zblqzx.cf:666/?/images/2020/09/19/vo7GDRu8le/4561d24763217a923747cc32173d5814.png" alt="" loading="lazy"></p>
 <!-- more -->
-<p>最后说明<br>
-1）复制各种ID，密码，Token的时候一定要多注意！多个空格，少个标点符号都导致无法运行！</p>
-<p>2）项目设定每3小时自动运行一次，每次调用3轮。定时自动启动修改地方文件 .github/workflow/AutoApiSecret.yml（自行百度cron定时任务格式，最短每5分钟一次）私有仓库有限制谨慎修改！</p>
-<p>3）无论怎么刷API也不能100%保证能续订服务！！！</p>
-<p>4）自动运行会更新1.txt文件，会生成好多无用的提交记录，可能影响使用Github!</p>
+<ul>
+<li>最后说明</li>
+</ul>
+<ol>
+<li>
+<p>复制各种ID，密码，Token的时候一定要多注意！多个空格，少个标点符号都导致无法运行！</p>
+</li>
+<li>
+<p>项目设定每3小时自动运行一次，每次调用3轮。定时自动启动修改地方文件 .github/workflow/AutoApiSecret.yml（自行百度cron定时任务格式，最短每5分钟一次）私有仓库有限制谨慎修改！</p>
+</li>
+<li>
+<p>无论怎么刷API也不能100%保证能续订服务！！！</p>
+</li>
+<li>
+<p>自动运行会更新1.txt文件，会生成好多无用的提交记录，可能影响使用Github!</p>
+</li>
+</ol>
 
                 </div>
             </article>
